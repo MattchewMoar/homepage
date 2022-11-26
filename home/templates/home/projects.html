@@ -1,11 +1,12 @@
 {% extends "home/home.html" %}
 {% load static %}
 {% block content %}
-    <div align=center>
-        <div>
-            <div>
-                <h1>Projects</h1>
-            </div>
-        </div>
+{% for post in posts %}
+<div id ="box1">
+    <h1 class="center">{{ post.title }}</h1>
     </div>
-{% endblock %}
+    <div id="box2">
+    <p>{{ post.content }}</p>
+  </div>
+  {% endfor %}
+ {% endblock %}
