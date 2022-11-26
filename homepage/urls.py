@@ -21,5 +21,6 @@ from home import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('home.urls')),
+    path('projects/', include('home.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()
