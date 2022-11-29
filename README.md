@@ -1,7 +1,14 @@
 # Personal Profile Page in Django
  This is basic and very as of now unfinished profile page done with Django the background image was produced by Dalle 2 with the prompt "“greyscale image fractal nodes of a network, impressionistic”. While basic and far from sophisticated this project might help some as a starting point for their
- own project. 
- 
+ own project if so note that in settings.py you should change the secrete key (this project defaults to changeme) to a secure one that you generate. 
+ ```
+
+from django.core.management.utils import get_random_secret_key
+
+# print your random secret key 
+print(get_random_secret_key())
+ ```
+ is an easy way from the python interpreter to generate a safe key to use in your own project
  ## Tips
  
 When searching through tutorials and documentations you will find many different directory structures for Django projects. The most frustrating problem i encountered setting up
@@ -15,6 +22,7 @@ Also to save yourself some hairpulling realize that browsers often store website
  
  ## TODO
  1. Add user to add images to project posts.
+ 2. Make flex box format look much better
  2. Make neat looking contact page. Shoot me a text button using twillo? Could this cause me huge problems?
  3. Add a page for my pet GIS project. Have you ever wanted to search open source Franklin County Auditor Data?! Well Look Out!
  
