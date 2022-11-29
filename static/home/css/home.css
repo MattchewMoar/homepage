@@ -129,6 +129,7 @@ a {
 }
 
 #box1 {
+	word-wrap: break-word;
 	background:rgba(158, 158, 157, 0.9);
 	border-radius: 25px;
 	color: rgb(142,71,71);
@@ -143,7 +144,8 @@ h2, p  {
 }
 
 #box1 p, #box2 p {
-	white-space:pre;
-	font-size:smaller;
-	font-family:monospace;
+	border-radius:25px;
+	font-size:16px;
+	padding:15px;
+	margin:5px;
 }
