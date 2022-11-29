@@ -11,6 +11,7 @@ the suggested file structure for static files, also before any changes will be s
 ```
 $python manage.py collectstatic
 ```
+Also to save yourself some hairpulling realize that browsers often store website file in their cache, sometimes for a suprising amount of time. Remember that changes to images, scripts and css files may not appear unless you clear your browsers cached data. Personally I installed the chrome extention cache killer which when activated forces the bowser to reload resources on each refresh. 
  
  ## TODO
  1. Add user to add images to project posts.
