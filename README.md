@@ -11,6 +11,15 @@ print(get_random_secret_key())
  is an easy way from the python interpreter to generate a safe key to use in your own project
  ## Tips
  
+ ### Migrations
+ Any changes to any of your models must be followed by 
+ ```
+ $python manage.py makemigrations appname
+ $python manage.py migrate
+ ```
+ if deploying to a service like pythonanywhere, you must also restart the web app for changes to apear. 
+ ### Static Files
+ 
 When searching through tutorials and documentations you will find many different directory structures for Django projects. The most frustrating problem i encountered setting up
 this project was correctly setting path variables in setting.py so my app would correctly read static files. Most of these problems were caused by mixing code from multiple sources which were
 setup with conflicting paths set in settings.py. My suggestion is to carefully reading and understand the sections of the offical django tutorial relating to path settings and
