@@ -149,3 +149,15 @@ h2, p  {
 	padding:15px;
 	margin:5px;
 }
+.flex-container {
+    display: flex;
+}
+
+.flex-child {
+    flex: 1;
+    border: 2px solid yellow;
+}  
+
+.flex-child:first-child {
+    margin-right: 20px;
+} 
