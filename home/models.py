@@ -29,8 +29,16 @@ class Bio(models.Model):
     about = models.TextField()
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='bio_posts')
 
+    def __str__(self):
+        return self.name
 
-
+class ContactInfo(models.Model):
+    name = models.CharField(max_length=200, unique=True)
+    email = models.EmailField(max_length=200, unique=True)
+    linkedin = models.URLField(max_length=200, unique=True)
+    github = models.URLField(max_length=200, unique=True)
+    discord = models.URLField(max_length=200, unique=True)
+    author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='contact_posts')
 
     def __str__(self):
         return self.name

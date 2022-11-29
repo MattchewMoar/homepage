@@ -1,6 +1,6 @@
 from django.contrib import admin
-from .models import Post
-from .models import Bio
+from .models import Post, Bio, ContactInfo
 
 admin.site.register(Post)
 admin.site.register(Bio)
+admin.site.register(ContactInfo)
