@@ -31,7 +31,7 @@ Also to save yourself some hairpulling realize that browsers often store website
  
  ## TODO
  1. Add user to add images to project posts.
- 2. Make flex box format look much better
+ 2. Make flex box format look better
  2. Make neat looking contact page. Shoot me a text button using twillo? Could this cause me huge problems?
  3. Add a page for my pet GIS project. Have you ever wanted to search open source Franklin County Auditor Data?! Well Look Out!
  
