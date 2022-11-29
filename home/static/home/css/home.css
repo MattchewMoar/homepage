@@ -87,6 +87,11 @@ a {
 .center {
 	text-align: center;
 }
+.right
+{
+	text-align: right;
+	text-size-adjust: 10%;
+}
 
 /* ================================= 
   Media Queries
