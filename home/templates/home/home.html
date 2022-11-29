@@ -1,2 +1,11 @@
 {% extends "home/navbar.html" %}
-   
+{% load static %}
+{% block content %}
+<div id ="box1">
+    <h1 class="center">{{ bio.name }}</h1>
+    </div>
+    <div id="box2">
+    <p>{{ bio.about }} {{bio.education }}{{ bio.author }}</p>
+  </div>
+
+{% endblock %}

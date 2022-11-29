@@ -11,7 +11,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['bio'] = Bio.objects.all()
+        context['bio'] = Bio.objects.get(id=1)
         return context
 
 
@@ -29,6 +29,6 @@ class ContactView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['contact'] = ContactInfo.objects.all()
+        context['contact'] = ContactInfo.objects.get(id=1)
         return context
 

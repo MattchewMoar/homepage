@@ -27,7 +27,7 @@ class Bio(models.Model):
     education = models.TextField()
     experience = models.TextField()
     about = models.TextField()
-    author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='bio_posts')
+    author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='bio')
 
     def __str__(self):
         return self.name

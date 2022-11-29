@@ -1,5 +1,11 @@
 {% extends "home/home.html" %}
 {% load static %}
 {% block content %}
-<h1>Contact Page</h1>
-{% endblock %}
+<div id ="box1">
+    <h1 class="center">{{ contact.name }}</h1>
+    </div>
+    <div id="box2">
+    <p>{{ contact.linkedin }} {{contact.github}}</p>
+  </div>
+ {% endblock %}
+
