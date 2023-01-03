@@ -35,10 +35,9 @@ class Bio(models.Model):
 class ContactInfo(models.Model):
     name = models.CharField(max_length=200, unique=True)
     email = models.EmailField(max_length=200, unique=True)
-    linkedin = models.URLField(max_length=200, unique=True)
+    linkin = models.URLField(max_length=200, unique=True)
     github = models.URLField(max_length=200, unique=True)
     discord = models.URLField(max_length=200, unique=True)
-    facebook = models.URLField(max_length=200, unique=True)
     facebook = models.URLField(max_length=200, unique=True, default="https://www.facebook.com/profile.php?id=100050463701271")
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='contact_posts')
 
