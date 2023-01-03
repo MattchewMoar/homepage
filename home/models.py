@@ -38,6 +38,8 @@ class ContactInfo(models.Model):
     linkedin = models.URLField(max_length=200, unique=True)
     github = models.URLField(max_length=200, unique=True)
     discord = models.URLField(max_length=200, unique=True)
+    facebook = models.URLField(max_length=200, unique=True)
+    facebook = models.URLField(max_length=200, unique=True, default="https://www.facebook.com/profile.php?id=100050463701271")
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='contact_posts')
 
     def __str__(self):
