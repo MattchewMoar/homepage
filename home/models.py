@@ -15,6 +15,8 @@ class Post(models.Model):
     content = models.TextField()
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
+    #add field for image url
+    image_url = models.URLField(max_length=200, unique = True, default="https://i.imgur.com/4ZQZQ2u.jpg")
 
     class Meta:
         ordering = ['-created_on']
@@ -35,9 +37,10 @@ class Bio(models.Model):
 class ContactInfo(models.Model):
     name = models.CharField(max_length=200, unique=True)
     email = models.EmailField(max_length=200, unique=True)
-    linkedin = models.URLField(max_length=200, unique=True)
+    linkin = models.URLField(max_length=200, unique=True)
     github = models.URLField(max_length=200, unique=True)
     discord = models.URLField(max_length=200, unique=True)
+    facebook = models.URLField(max_length=200, unique=True, default="https://www.facebook.com/profile.php?id=100050463701271")
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='contact_posts')
 
     def __str__(self):

@@ -135,6 +135,10 @@ a {
 	color: rgb(142,71,71);
 }
 
+#box2 {
+	background:rgba(211, 208, 208, 0.75);
+	border-radius: 25px;
+}
 h2, p  {
 	padding:5px;
 }

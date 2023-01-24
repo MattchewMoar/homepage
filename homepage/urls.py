@@ -23,5 +23,6 @@ urlpatterns = [
     path('', include('home.urls')),
     path('projects/', include('home.urls')),
     path('contact/', include('home.urls')),
+    path('generate_post/', include('home.urls')),
 ]
 urlpatterns += staticfiles_urlpatterns()
