@@ -20,7 +20,7 @@ class HomeView(TemplateView):
 
 
 class ProjectView(TemplateView):
-    template_name = 'home/projects.html'
+    template_name = 'home/fakenews.html'
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -59,35 +59,26 @@ def new_post(request):
     if request.method == 'POST':
         # Get the data from the form
         title = request.POST.get('title')
-        prompt = "A satirical blog post about " +title + "in the style of the onion. Make i funny and interesting. The post should be about 500 words long. Make sure its obviously satirical."
-        openai.api_key = "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"
+        openai.api_key = "API KEY HERE"
         author_id = 1
         #Get current date and time
         now = datetime.datetime.now()
         #generate slug  
         slug = title.replace(" ", "-")
-        image = openai.Image.create(
-                prompt = title,
-                n = 1,
-                size="512x512"
-                )
-        image_url = image['data'][0]['url']
-        while(image_url == None):
-            os.sleep(1)
         response = openai.Completion.create(
             model="text-davinci-003",
-            prompt="A satirical news article about " +title +" in the style of the Onion pretending to be Rueters. Ironic and absurd at least 1000 word long. Make sure its obviously satirical. Give it a headline and a subhead. Make sure it wraps up with a punchline.",
+            prompt="A satirical news article about " +title +" in the style of the  Rueters. Ironic and wildly absurd at least 750 word long. Make sure its obviously satirical.",
             temperature=0.8,
             max_tokens=1000,
             top_p=1,
-            frequency_penalty=0,
-            presence_penalty=0,
-            best_of = 8,
+            frequency_penalty=.5,
+            presence_penalty=.3,
+            best_of = 5,
             )
         content = response['choices'][0]['text']
-        post = Post(title=title, content=content, author_id=author_id, slug=slug, created_on=now, image_url=image_url)
+        post = Post(title=title, content=content, author_id=author_id, slug=slug, created_on=now)
         post.save()
-        return redirect('projects')
+        return redirect('fakenews')
 
     return render(request, 'new_post.html')
 

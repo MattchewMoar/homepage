@@ -1,0 +1,33 @@
+{% extends "home/home.html" %}
+{% load static %}
+{% block content %}
+<br />
+<form class="form-style-7" method="post" action="{% url 'new_post' %}">
+  {% csrf_token %}
+    <ul>
+        <li>
+            <label for="title">Headline</label>
+            <textarea type="text" id="title" name="title" maxlength="45" required></textarea>
+            <span>Enter the headline you want to see</span>
+        </li>
+        <li>
+            <button type="submit" class="btn btn-primary">Get Published!</button>
+        </li>
+    </ul>
+</form>
+
+<div class="d-flex justify-content-center flex-wrap">
+  {% for post in posts %}
+    <div class="card text-center m-2" style="width: 48%;">
+      <div class="card-body">
+        <h5 class="card-title">{{ post.title }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">Written by: G. P. Tea</h6>
+        <p class="card-text">Published: {{ post.created_on }}</p>
+        <p class="card-text" style="overflow-wrap: break-word;">{{ post.content }}</p>
+      </div>
+    </div>
+  {% endfor %}
+</div>
+
+
+ {% endblock %}

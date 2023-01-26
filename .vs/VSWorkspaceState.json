@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\home",
+    "\\homepage",
+    "\\home\\static",
+    "\\home\\static\\home",
+    "\\home\\static\\home\\css",
+    "\\home\\templates",
+    "\\home\\templates\\home"
+  ],
+  "SelectedNode": "\\home\\models.py",
+  "PreviewInSolutionExplorer": false
+}
